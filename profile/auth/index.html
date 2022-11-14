@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Noroff Store | Home</title>
+  <title>Noroff Store | Profile | Authenticate</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
   <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
@@ -131,7 +131,7 @@
     <hr>
     <ul class="nav nav-pills flex-column mb-auto">
       <li class="nav-item">
-        <a href="/" class="nav-link active" aria-current="page">
+        <a href="/" class="nav-link text-white" aria-current="page">
           <svg class="bi pe-none me-2" width="16" height="16">
             <use xlink:href="#home"></use>
           </svg>
@@ -147,7 +147,7 @@
         </a>
       </li>
       <li>
-        <a href="/profile/orders/" class="nav-link text-white">
+        <a href="/profile/orders/" class="nav-link active">
           <svg class="bi pe-none me-2" width="16" height="16">
             <use xlink:href="#table"></use>
           </svg>
@@ -177,112 +177,34 @@
   <main class="flex-grow-1 d-flex flex-column" style="width: calc(100% - 280px);">
     <div class="banner d-flex align-items-center sticky-top">
       <div class="container-fluid">
-        <h1>Products</h1>
+        <h1 class="breadcrumb mb-0">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb mb-0">
+              <li class="breadcrumb-item fs-2" aria-current="page"><a href="/profile/">Profile</a></li>
+              <li class="breadcrumb-item fs-2 active" aria-current="page">Authenticate</li>
+            </ol>
+          </nav>
+        </h1>
       </div>
     </div>
-    <div class="container-fluid flex-grow-1">
-      <div class="row pt-3">
-        <div class="col-12 col-md-6 col-lg-4 mb-3">
-          <div class="card product">
-            <img src="https://picsum.photos/600" alt="Example Image" class="card-img">
-            <div class="card-header">Example Product 1</div>
-            <div class="list-group list-group-flush">
-              <div class="list-group-item">Feature A</div>
-              <div class="list-group-item">Feature B</div>
-              <div class="list-group-item">Feature C</div>
+    <div class="container-fluid flex-grow-1 d-flex flex-column justify-content-center">
+      <div class="row pt-3 justify-content-center pb-5">
+        <div class="col-12 col-md-10 pb-5">
+          <form action="/profile/">
+            <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
+  
+            <div class="form-floating mb-2">
+              <input type="email" class="form-control" id="floatingInput" placeholder="name@stuf.noroff.no" required>
+              <label for="floatingInput">Email address</label>
             </div>
-            <div class="card-footer">
-              <div class="btn-group btn-group-sm">
-                <a href="#product=1" class="btn btn-success">View Product</a>
-                <button class="btn btn-outline-success" data-cart="add" data-id="1">Add to Cart</button>
-              </div>
+
+            <div class="form-floating mb-2">
+              <input type="password" class="form-control" id="floatingPassword" placeholder="Password" required>
+              <label for="floatingPassword">Password</label>
             </div>
-          </div>
-        </div>
-        <div class="col-12 col-md-6 col-lg-4 mb-3">
-          <div class="card product">
-            <img src="https://picsum.photos/600" alt="Example Image" class="card-img">
-            <div class="card-header">Example Product 2</div>
-            <div class="list-group list-group-flush">
-              <div class="list-group-item">Feature A</div>
-              <div class="list-group-item">Feature B</div>
-              <div class="list-group-item">Feature C</div>
-            </div>
-            <div class="card-footer">
-              <div class="btn-group btn-group-sm">
-                <a href="#product=2" class="btn btn-success">View Product</a>
-                <button class="btn btn-outline-success" data-cart="add" data-id="2">Add to Cart</button>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-12 col-md-6 col-lg-4 mb-3">
-          <div class="card product">
-            <img src="https://picsum.photos/600" alt="Example Image" class="card-img">
-            <div class="card-header">Example Product 3</div>
-            <div class="list-group list-group-flush">
-              <div class="list-group-item">Feature A</div>
-              <div class="list-group-item">Feature B</div>
-              <div class="list-group-item">Feature C</div>
-            </div>
-            <div class="card-footer">
-              <div class="btn-group btn-group-sm">
-                <a href="#product=3" class="btn btn-success">View Product</a>
-                <button class="btn btn-outline-success" data-cart="add" data-id="3">Add to Cart</button>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-12 col-md-6 col-lg-4 mb-3">
-          <div class="card product">
-            <img src="https://picsum.photos/600" alt="Example Image" class="card-img">
-            <div class="card-header">Example Product 4</div>
-            <div class="list-group list-group-flush">
-              <div class="list-group-item">Feature A</div>
-              <div class="list-group-item">Feature B</div>
-              <div class="list-group-item">Feature C</div>
-            </div>
-            <div class="card-footer">
-              <div class="btn-group btn-group-sm">
-                <a href="#product=4" class="btn btn-success">View Product</a>
-                <button class="btn btn-outline-success" data-cart="add" data-id="4">Add to Cart</button>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-12 col-md-6 col-lg-4 mb-3">
-          <div class="card product">
-            <img src="https://picsum.photos/600" alt="Example Image" class="card-img">
-            <div class="card-header">Example Product 5</div>
-            <div class="list-group list-group-flush">
-              <div class="list-group-item">Feature A</div>
-              <div class="list-group-item">Feature B</div>
-              <div class="list-group-item">Feature C</div>
-            </div>
-            <div class="card-footer">
-              <div class="btn-group btn-group-sm">
-                <a href="#product=5" class="btn btn-success">View Product</a>
-                <button class="btn btn-outline-success" data-cart="add" data-id="5">Add to Cart</button>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-12 col-md-6 col-lg-4 mb-3">
-          <div class="card product">
-            <img src="https://picsum.photos/600" alt="Example Image" class="card-img">
-            <div class="card-header">Example Product 6</div>
-            <div class="list-group list-group-flush">
-              <div class="list-group-item">Feature A</div>
-              <div class="list-group-item">Feature B</div>
-              <div class="list-group-item">Feature C</div>
-            </div>
-            <div class="card-footer">
-              <div class="btn-group btn-group-sm">
-                <a href="#product=6" class="btn btn-success">View Product</a>
-                <button class="btn btn-outline-success" data-cart="add" data-id="6">Add to Cart</button>
-              </div>
-            </div>
-          </div>
+  
+            <button class="w-100 btn btn-lg btn-primary" type="submit">Sign in</button>
+          </form>
         </div>
       </div>
     </div>
